@@ -1,0 +1,561 @@
+{
+	"info": {
+		"_postman_id": "d0cdc6fa-8b34-49dd-a7d3-26a8fd0d402c",
+		"name": "library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/F:/hevob8vqh9k81.jpg"
+								},
+								{
+									"key": "name",
+									"value": "alonso",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "maley.mckynzi@moabuild.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "000",
+									"type": "default"
+								},
+								{
+									"key": "confirmtionPassword",
+									"value": "000",
+									"type": "default"
+								},
+								{
+									"key": "age",
+									"value": "23",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "01143432637",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change pass while you are logged in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZleWloaTU0MzNAa2F1ZGF0LmNvbSIsImlkIjoiNjQxMGM2OTM5ZmNkYjAwMTQ2NjlmMTljIiwiaWF0IjoxNjgyMTY5NjU1LCJleHAiOjE2ODIxNzMyNTV9.1JlFr-kjbWw-ckDoNVjk_bE590ApF7tozeGE3rSRNdU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newpass\":\"000\",\r\n    \"cpass\":\"000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/changepass",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"changepass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"feyihi5433@kaudat.com\",\r\n    \"password\":\"000\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5tcXNwYnh5dXZzenNhb2lid0BiYml0cS5jb20iLCJpZCI6IjY0MDVkNmU4YjRhZWMwZmNlOWIzZTFjOSIsImlhdCI6MTY3ODEwOTk0NywiZXhwIjoxNjc4MTEzNTQ3fQ.cDfNRQgXRW36UDRX4FU_gIXZoJLqUxmr2v34_yxurQQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "soft delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZleWloaTU0MzNAa2F1ZGF0LmNvbSIsImlkIjoiNjQxMGM2OTM5ZmNkYjAwMTQ2NjlmMTljIiwiaWF0IjoxNjc4ODIyNTg5LCJleHAiOjE2Nzg4MjYxODl9.DJVKOwFeXr_q0_DBgOsWcUwze1p-bDBWRVYq1uR-7qU",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/softdelete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"softdelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updata name and phone",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZleWloaTU0MzNAa2F1ZGF0LmNvbSIsImlkIjoiNjQxMGM2OTM5ZmNkYjAwMTQ2NjlmMTljIiwiaWF0IjoxNjgyMTY5NjU1LCJleHAiOjE2ODIxNzMyNTV9.1JlFr-kjbWw-ckDoNVjk_bE590ApF7tozeGE3rSRNdU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"vettel\",\r\n    \"phone\":\"111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetpass send mail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/forgetpass/gurfateh.bartholomew@moabuild.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"forgetpass",
+								"gurfateh.bartholomew@moabuild.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbGNnc2Fobm1zaG5mdXhhckBiYml0ai5jb20iLCJpZCI6IjY0MDYzMjY0YmYwZDM5ZTkyYTJkZGNjYyIsImlhdCI6MTY3ODEyOTI0MywiZXhwIjoxNjc4MTMyODQzfQ.0ohjxrVzdLr5WMx8nFWZcys9v_R5yF_UWAGNjgdy3FM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update img",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZleWloaTU0MzNAa2F1ZGF0LmNvbSIsImlkIjoiNjQxMGM2OTM5ZmNkYjAwMTQ2NjlmMTljIiwiaWF0IjoxNjc4ODI2OTkyLCJleHAiOjE2Nzg4MzA1OTJ9.Ap9ZxIyTddMatG5-TWRxc8slmBq_1zEqHSDQ2cTDTEk",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/F:/315306351_223383606688307_8942924835103312473_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/updateimg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"updateimg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "add book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/Abo El-Magd/Desktop/temp/fvfvfdownload.jpg"
+								},
+								{
+									"key": "title",
+									"value": "clean",
+									"type": "default"
+								},
+								{
+									"key": "tag",
+									"value": "software",
+									"type": "default"
+								},
+								{
+									"key": "authur",
+									"value": "unclebob",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/admin/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"admin",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all avalibe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/admin/allavalibe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"admin",
+								"allavalibe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all borrowed book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/book/admin/allborrowed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"admin",
+								"allborrowed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search py name in params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/book/admin/search/c++",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"admin",
+								"search",
+								"c++"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Issue",
+			"item": [
+				{
+					"name": "borrow book issue",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZleWloaTU0MzNAa2F1ZGF0LmNvbSIsImlkIjoiNjQxMGM2OTM5ZmNkYjAwMTQ2NjlmMTljIiwiaWF0IjoxNjgyMTUyMzYxLCJleHAiOjE2ODIxNTU5NjF9.2iJjlc-WJRrciizVJZg6CDlOPlKcLKcn17blq78p-tk",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"vet borrows py\",\r\n    \"day\":\"2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/issue/admin/borrow/6411dfd0ad9b83676b24ef7c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"issue",
+								"admin",
+								"borrow",
+								"6411dfd0ad9b83676b24ef7c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all isuues by user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZleWloaTU0MzNAa2F1ZGF0LmNvbSIsImlkIjoiNjQxMGM2OTM5ZmNkYjAwMTQ2NjlmMTljIiwiaWF0IjoxNjgyMTY5NzQ3LCJleHAiOjE2ODIxNzMzNDd9.PYG-aBO8rTBvPKUaFtg9E24ZqgxZ7paM7LUx3n5JZho",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/issue/admin/allIssuesOfUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"issue",
+								"admin",
+								"allIssuesOfUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "return book",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZleWloaTU0MzNAa2F1ZGF0LmNvbSIsImlkIjoiNjQxMGM2OTM5ZmNkYjAwMTQ2NjlmMTljIiwiaWF0IjoxNjgyMTY5NzQ3LCJleHAiOjE2ODIxNzMzNDd9.PYG-aBO8rTBvPKUaFtg9E24ZqgxZ7paM7LUx3n5JZho",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/issue/admin/returnbook/6443a11a16120a0969df195e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"issue",
+								"admin",
+								"returnbook",
+								"6443a11a16120a0969df195e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
